@@ -42,8 +42,17 @@ Tested against Rails 2.3 - currently untested against Rails 3.
 'linguistics' gem for turning numbers into words and ordinals.
 'Digest/SHA2' for hashing the possible answers.
 
-Instructions
+Installation
 ------------
+
+Simply add:
+
+    config.gem 'nice_text_captcha'
+
+to your environment.rb file, and install the gem via your preferred method.
+
+Usage Instructions
+------------------
 
 In your model, you need to add some validation:
 
