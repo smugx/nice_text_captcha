@@ -76,8 +76,8 @@ and give the user a text box for their answer:
     <% form_for(@thing) do |f| %>
       <!-- normal form elements here -->
       
-      <%= f.nice_text_captcha %><br />
-      <%= f.text_field :nice_text_captcha %><br />
+      <%= f.nice_text_captcha %> <!-- this will generate a label with the catcha text inside -->
+      <%= f.text_field :nice_text_captcha %>
       
       <!-- probably a submit button here -->
       
