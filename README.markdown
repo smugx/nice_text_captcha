@@ -47,29 +47,29 @@ Instructions
 
 In your model, you need to add some validation:
 
-class Thing < ActiveRecord::Base
-  validate :check_nice_text_captcha
-end
+    class Thing < ActiveRecord::Base
+      validate :check_nice_text_captcha
+    end
 
 In your controller, you need to add a call to populate the answers from the
 data in the session:
 
-class ThingsController < ActiveRecord::Base
-  def create
-		@thing = Thing.new(params[:thing]) # as normal
-		validate_nice_text_captcha_for(@thing)
-	end
-end
+	  class ThingsController < ActiveRecord::Base
+	    def create
+			  @thing = Thing.new(params[:thing]) # as normal
+			  validate_nice_text_captcha_for(@thing)
+		  end
+	  end
 
 Finally, in your view, you need to render the question by calling nice_text_captcha,
 and give the user a text box for their answer:
 
-<% form_for(@thing) do |f| %>
-  <!-- normal form elements here -->
-
-	<%= f.nice_text_captcha %><br />
-	<%= f.text_field :nice_text_captcha %><br />
-	
-	<!-- probably a submit button here -->
-
-<% end %>
+	  <% form_for(@thing) do |f| %>
+	    <!-- normal form elements here -->
+  
+		  <%= f.nice_text_captcha %><br />
+		  <%= f.text_field :nice_text_captcha %><br />
+  	
+		  <!-- probably a submit button here -->
+  
+	  <% end %>
