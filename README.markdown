@@ -38,9 +38,9 @@ words ("three") are accepted.
 Requirements
 ------------
 
-Tested against Rails 2.3 - currently untested against Rails 3.
-'linguistics' gem for turning numbers into words and ordinals.
-'Digest/SHA2' for hashing the possible answers.
+* Tested against Rails 2.3 - currently untested against Rails 3.
+* 'linguistics' gem for turning numbers into words and ordinals (gem install linguistics)
+* 'Digest/SHA2' for hashing the possible answers.
 
 Installation
 ------------

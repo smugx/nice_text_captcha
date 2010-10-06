@@ -1,4 +1,3 @@
-#config.gem "linguistics"
 require 'linguistics'
 Linguistics::use(:en)
 
@@ -14,8 +13,11 @@ require 'nice_text_captcha/types/maths_question'
 require 'nice_text_captcha/types/word_length_question'
 require 'nice_text_captcha/types/words_in_list_question'
 
+# Mix in form builder helper
 ActionView::Helpers::FormBuilder.send :include, NiceTextCaptcha::FormBuilderExtensions
 
+# Mix in validation
 ActiveRecord::Base.send :include, NiceTextCaptcha::ActiveRecordExtensions
 
+# Mix in controller-controlled validation
 ActionController::Base.send :include, NiceTextCaptcha::ActionControllerExtensions
