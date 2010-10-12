@@ -17,18 +17,18 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "nice_text_captcha"
-  s.version           = "0.1.1"
+  s.version           = "0.1.2"
   s.summary           = "Generates Text Catpchas, that are 'nice' by my own personal definition!"
   s.author            = "Neil Smith"
   s.email             = "neil.jx.smith@gmail.com"
-#  s.homepage          = "http://yoursite.example.com"
+  s.homepage          = "http://github.com/smugx/nice_text_captcha"
 
   s.has_rdoc          = true
-  s.extra_rdoc_files  = %w(README)
-  s.rdoc_options      = %w(--main README)
+  s.extra_rdoc_files  = %w(README.markdown)
+  s.rdoc_options      = %w(--main README.markdown)
 
   # Add any extra files to include in the gem
-  s.files             = %w(README) + Dir.glob("{lib/**/*}")
+  s.files             = %w(README.markdown) + Dir.glob("{lib/**/*}")
   s.require_paths     = ["lib"]
 
   # If you want to depend on other gems, add them here, along with any

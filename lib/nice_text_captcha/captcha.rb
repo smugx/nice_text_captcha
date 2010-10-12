@@ -5,13 +5,16 @@ module NiceTextCaptcha
     attr_reader :question
     attr_reader :answers
    
+    NICE_TEXT_CAPTCHA_TYPE_DEFAULTS = [
+      Types::FixedQuestion,
+      Types::MathsQuestion,
+      Types::LetterPositionQuestion,
+      Types::WordsInListQuestion,
+      Types::WordLengthQuestion,
+    ]
+   
     def initialize
-      captcha = [
-        Types::MathsQuestion,
-        Types::LetterPositionQuestion,
-        Types::WordsInListQuestion,
-        Types::WordLengthQuestion,
-      ].rand.new
+      captcha = (NICE_TEXT_CAPTCHA_TYPES rescue NICE_TEXT_CAPTCHA_TYPE_DEFAULTS).rand.new
       @question = captcha.question
       @answers = captcha.answers
     end

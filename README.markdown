@@ -13,8 +13,24 @@ Questions are purposely simple, and examples would include:
 
 * How many letters are there in the word 'White'?
 * In the word "tiger", what is the letter in the 5th position?
-* How many animals are in the words: "cat", "orange", and "dolphin"?
+* How many animals are in the words: "cat", 'Orange', and "dolphin"?
 * What is 'four' + "nine"?
+
+Why Another CAPTCHA Solution?
+-----------------------------
+
+There are plenty of choices out there, but none quite met my personal needs (or
+some client's needs) for one reason or another:
+
+* I wanted a self-contained solution that wasn't reliant on a 3rd party service
+* Relatedly, I didn't want to have to muck around with API keys to get it working
+* I wanted a few different question types, not just simple maths-based ones
+* I didn't want long/odd words and case that make the question difficult to
+  understand at first glance (so no "What's the first adverb in the list
+	discombobulation, deFeNEStraTE, DiscOncErTinGly, DiSiNTEGRATing. Enter the
+	name of a good Jack Black film if you don't think there are any adverbs. Enter
+	a surprising fact about cheese if you don't think Jack Black has done any
+	good films.")
 
 Implementation
 --------------
