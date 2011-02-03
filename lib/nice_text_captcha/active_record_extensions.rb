@@ -15,8 +15,6 @@ module NiceTextCaptcha
       if !captcha_successful
         errors.add_to_base(nice_text_captcha_failure_message)
       end
-
-      @nice_text_captcha = nil
         
     end
     
