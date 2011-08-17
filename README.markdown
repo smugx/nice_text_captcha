@@ -67,6 +67,14 @@ Simply add:
 
 to your environment.rb file, and install the gem via your preferred method.
 
+or for Rails 3, add the following line to your Gemfile:
+
+    gem 'nice_text_captcha'
+
+and run:
+
+    bundle install
+
 Usage Instructions
 ------------------
 
