@@ -17,7 +17,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "nice_text_captcha"
-  s.version           = "0.1.4"
+  s.version           = "0.2.0"
   s.summary           = "Generates Text Catpchas, that are 'nice' by my own personal definition!"
   s.author            = "Neil Smith"
   s.email             = "neil.jx.smith@gmail.com"
