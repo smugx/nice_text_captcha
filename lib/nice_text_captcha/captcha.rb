@@ -6,11 +6,11 @@ module NiceTextCaptcha
     attr_reader :answers
    
     NICE_TEXT_CAPTCHA_TYPE_DEFAULTS = [
-      Types::FixedQuestion,
-      Types::MathsQuestion,
-      Types::LetterPositionQuestion,
-      Types::WordsInListQuestion,
-      Types::WordLengthQuestion,
+      NiceTextCaptcha::Types::FixedQuestion,
+      NiceTextCaptcha::Types::MathsQuestion,
+      NiceTextCaptcha::Types::LetterPositionQuestion,
+      NiceTextCaptcha::Types::WordsInListQuestion,
+      NiceTextCaptcha::Types::WordLengthQuestion,
     ]
    
     def initialize
@@ -24,7 +24,12 @@ module NiceTextCaptcha
     end
 
     def self.hash(obj, answer)
-      str = obj.to_s + answer.to_s + ActionController::Base.session_options[:secret].to_s
+      begin
+        secret = ActionController::Base.session_options[:secret]
+      rescue Exception => e
+        secret = Rails.application.config.secret_token
+      end
+      str = obj.to_s + answer.to_s + secret.to_s
       Digest::SHA2.hexdigest(str)
     end
     
