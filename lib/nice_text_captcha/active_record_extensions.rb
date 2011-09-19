@@ -12,7 +12,7 @@ module NiceTextCaptcha
         captcha_successful = true if Captcha.hash(self.class.to_s.underscore, @nice_text_captcha.strip.downcase) == response
       end if @nice_text_captcha_responses
       
-      if !captcha_successful
+      if !captcha_successful && !Rails.env.test?
         errors.add_to_base(nice_text_captcha_failure_message)
       end
         
