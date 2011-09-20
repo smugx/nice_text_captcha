@@ -13,7 +13,7 @@ module NiceTextCaptcha
       end if @nice_text_captcha_responses
       
       if !captcha_successful && !Rails.env.test?
-        errors.add_to_base(nice_text_captcha_failure_message)
+        errors.add(:nice_text_captcha, nice_text_captcha_failure_message)
       end
         
     end
@@ -21,7 +21,7 @@ module NiceTextCaptcha
 protected
 
     def nice_text_captcha_failure_message
-      "Please ensure you answer the security question (CAPTCHA) correctly"
+      "Please answer the security question correctly"
     end
     
   end
