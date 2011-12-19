@@ -13,7 +13,7 @@ module NiceTextCaptcha
       end if @nice_text_captcha_responses
       
       if !captcha_successful && !Rails.env.test?
-        errors.add(:nice_text_captcha, nice_text_captcha_failure_message)
+        errors.add(:base, nice_text_captcha_failure_message)
       end
         
     end
