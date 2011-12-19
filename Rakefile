@@ -1,7 +1,7 @@
 require "rubygems"
 require "rake/gempackagetask"
 require "rake/rdoctask"
-
+require "bundler/gem_tasks"
 
 
 task :default => :package do
